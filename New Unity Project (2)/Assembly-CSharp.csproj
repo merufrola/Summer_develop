@@ -52,10 +52,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ContollerGrabObject.cs" />
+     <Compile Include="Assets\destroyzone.cs" />
      <Compile Include="Assets\eat.cs" />
+     <Compile Include="Assets\enemtAI.cs" />
      <Compile Include="Assets\LaserPointer.cs" />
      <Compile Include="Assets\sencer.cs" />
      <Compile Include="Assets\spawncontroller.cs" />
+     <Compile Include="Assets\statemanager.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
