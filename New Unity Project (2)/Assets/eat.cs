@@ -21,13 +21,36 @@ public GameObject usagi;
 	}
 
 	void OnTriggerEnter (Collider col) {
-		if(col.gameObject.tag == "food"){
 
- if(col.gameObject == usagi){
 
-			Debug.Log("out");
-			//Destroy(Food);
-		}
-		}
+
+
+	switch(col.gameObject.tag){
+		case "hare":
+			Destroy(this.gameObject);
+		    statemanager.point = statemanager.point + 5;
+			break;
+		case "fox" :
+		Destroy(this.gameObject);
+		statemanager.point = statemanager.point + 10;
+		break;
+		case "wolf" :
+		Destroy(this.gameObject);
+		statemanager.point = statemanager.point + 20;
+		break;
+		case "bear" :
+		Destroy(this.gameObject);
+		statemanager.point = statemanager.point + 40;
+		break;
+		case "human" :
+		Destroy(this.gameObject);
+		statemanager.point = statemanager.point + 900;
+		break;
+		case "food" :
+		Destroy(this.gameObject);
+		statemanager.point = statemanager.point + 1;
+		break;
+
+	}
 	}
 }

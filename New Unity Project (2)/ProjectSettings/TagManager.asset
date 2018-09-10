@@ -15,6 +15,7 @@ TagManager:
   - hare
   - wolf
   - human
+  - Body
   layers:
   - Default
   - TransparentFX
