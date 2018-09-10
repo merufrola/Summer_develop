@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - ME
   - food
+  - zone
   layers:
   - Default
   - TransparentFX
