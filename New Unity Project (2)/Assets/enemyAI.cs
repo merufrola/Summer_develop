@@ -40,7 +40,7 @@ if(flag == 0){
 			case "wolf" :
 			case "human" :
 
-		
+
 		transform.position += transform.forward*0.1f;
 		break;
 		}
@@ -61,6 +61,9 @@ if(Physics.Raycast(ray, out hit, 10.0f)){
 }
 
 
+
+
+
 Invoke("damage",10f);
 
 
@@ -73,4 +76,41 @@ int rand(){
 	randGOAL = Random.Range(0,3);
 	return randGOAL;
 }
+
+void OnTriggerEnter(Collider col){
+	if(col.gameObject.tag == "grab"){
+		switch(transform.tag){
+			case "hare":
+			if(statemanager.haregrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "fox":
+			if(statemanager.foxgrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "wolf":
+			if(statemanager.wolfgrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "bear":
+			if(statemanager.beargrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "human":
+			if(statemanager.humangrab){
+				SendMessage("Grab");
+			}
+			break;
+		}
+	}
+}
+
 }

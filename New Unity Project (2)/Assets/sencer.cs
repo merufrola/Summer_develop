@@ -17,20 +17,20 @@ Vector3 pos;
 		transform.position = pos;
 	}
 
-	void OnTriggerEnter(){
+	void OnTriggerEnter(Collider col){
+		Debug.Log("b");
+
+		switch(col.gameObject.tag){
 		case "hare":
-
 		case "fox" :
-
 		case "wolf" :
-
 		case "bear" :
-
 		case "human" :
-
 		case "food" :
 		// GameOver処理
+		Debug.Log("dead");
 		break;
+	}
 
 	}
 }

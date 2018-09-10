@@ -16,6 +16,7 @@ TagManager:
   - wolf
   - human
   - Body
+  - grab
   layers:
   - Default
   - TransparentFX
