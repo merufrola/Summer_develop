@@ -15,10 +15,18 @@ public class destroyzone : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col) {
-		// if(col.gameObject.tag == "usagi" || col.gameObject.tag == "kitune" || col.gameObject.tag == "okami" || col.gameObject.tag == "kuma" || col.gameObject.tag == "hito"){
-		// 	Debug.Log("ok");
-		// 	col.gameObject.SendMessage("damage");
-		// }
+		switch(col.gameObject.tag){
+
+			case "hare" :
+			case "fox" :
+			case "wolf" :
+			case "bear" :
+			case "human" :
+
+		 	Debug.Log("ok");
+		 	col.gameObject.SendMessage("damage");
+			 break;
+		}
 // switch(col.gameObject.tag){
 // 	cace "usagi"
 
