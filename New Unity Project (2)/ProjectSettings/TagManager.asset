@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - ME
+  - food
+  - zone
   layers:
   - Default
   - TransparentFX
