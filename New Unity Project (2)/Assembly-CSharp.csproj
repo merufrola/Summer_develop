@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ContollerGrabObject.cs" />
+     <Compile Include="Assets\destroyzone.cs" />
      <Compile Include="Assets\eat.cs" />
+     <Compile Include="Assets\enemtAI.cs" />
      <Compile Include="Assets\LaserPointer.cs" />
      <Compile Include="Assets\sencer.cs" />
      <Compile Include="Assets\spawncontroller.cs" />

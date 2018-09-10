@@ -9,6 +9,7 @@ TagManager:
   - ME
   - food
   - zone
+  - enemy
   layers:
   - Default
   - TransparentFX
