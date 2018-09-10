@@ -27,13 +27,13 @@ target = GameObject.Find("foodsencer").transform;
 if(flag == 0){
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position-transform.position),1f);
 
-		transform.position += transform.forward*0.1f;
+		transform.position += transform.forward*0.05f;
 	}
 	else if(flag == 1){
 		switch(transform.tag){
 			case "fox" :
 			case "bear" :
-			transform.position -= transform.forward*0.1f;
+			transform.position -= transform.forward*0.05f;
 			break;
 
 			case "hare" :
@@ -41,7 +41,7 @@ if(flag == 0){
 			case "human" :
 
 
-		transform.position += transform.forward*0.1f;
+		transform.position += transform.forward*0.05f;
 		break;
 		}
 	}
@@ -53,7 +53,7 @@ if(Physics.Raycast(ray, out hit, 10.0f)){
 	if(hit.collider.tag == "ME"){
 
 	float dis = hit.distance;
-		if(dis<4){
+		if(dis<15){
 			flag = 1;
 		}
 }

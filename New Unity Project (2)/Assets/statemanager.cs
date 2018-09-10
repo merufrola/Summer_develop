@@ -5,7 +5,7 @@ using UnityEngine;
 public class statemanager : MonoBehaviour {
 
 public static int state = 0;
-public static int point = 0;
+public static int point = 5;
 public static bool haregrab = false;
 public static bool foxgrab = false;
 public static bool wolfgrab = false;
