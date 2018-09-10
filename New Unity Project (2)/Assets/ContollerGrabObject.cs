@@ -81,19 +81,31 @@ public class ContollerGrabObject : MonoBehaviour {
 
     void Update()
     {
-        if (Controller.GetHairTriggerDown())
-        {
-            if (collidingObject)
-            {
-                GrabObject();
-            }
-        }
+        // if (Controller.GetHairTriggerDown())
+        // {
+        //     if (collidingObject)
+        //     {
+        //
+        //         GrabObject();
+        //     }
+        // }
 
         if (Controller.GetHairTriggerUp())
         {
             if (objectInHand)
             {
                 ReleaseObject();
+            }
+        }
+    }
+
+    void Grab(){
+        if (Controller.GetHairTriggerDown())
+        {
+            if (collidingObject)
+            {
+
+                GrabObject();
             }
         }
     }

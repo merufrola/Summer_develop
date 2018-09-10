@@ -27,21 +27,21 @@ target = GameObject.Find("foodsencer").transform;
 if(flag == 0){
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position-transform.position),1f);
 
-		transform.position += transform.forward*0.1f;
+		transform.position += transform.forward*0.05f;
 	}
 	else if(flag == 1){
 		switch(transform.tag){
 			case "fox" :
 			case "bear" :
-			transform.position -= transform.forward*0.1f;
+			transform.position -= transform.forward*0.05f;
 			break;
 
 			case "hare" :
 			case "wolf" :
 			case "human" :
 
-		
-		transform.position += transform.forward*0.1f;
+
+		transform.position += transform.forward*0.05f;
 		break;
 		}
 	}
@@ -53,12 +53,15 @@ if(Physics.Raycast(ray, out hit, 10.0f)){
 	if(hit.collider.tag == "ME"){
 
 	float dis = hit.distance;
-		if(dis<4){
+		if(dis<15){
 			flag = 1;
 		}
 }
 
 }
+
+
+
 
 
 Invoke("damage",10f);
@@ -73,4 +76,41 @@ int rand(){
 	randGOAL = Random.Range(0,3);
 	return randGOAL;
 }
+
+void OnTriggerEnter(Collider col){
+	if(col.gameObject.tag == "grab"){
+		switch(transform.tag){
+			case "hare":
+			if(statemanager.haregrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "fox":
+			if(statemanager.foxgrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "wolf":
+			if(statemanager.wolfgrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "bear":
+			if(statemanager.beargrab){
+				SendMessage("Grab");
+			}
+			break;
+
+			case "human":
+			if(statemanager.humangrab){
+				SendMessage("Grab");
+			}
+			break;
+		}
+	}
+}
+
 }
