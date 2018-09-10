@@ -7,6 +7,9 @@ public class eat : MonoBehaviour {
 public GameObject HMD ;
 public GameObject Food;
 
+[SerializeField]
+public GameObject usagi;
+
 	// Use this for initialization
 	void Start () {
 
@@ -19,8 +22,12 @@ public GameObject Food;
 
 	void OnTriggerEnter (Collider col) {
 		if(col.gameObject.tag == "food"){
-			Debug.Log("ok");
-			Destroy(Food);
+
+ if(col.gameObject == usagi){
+
+			Debug.Log("out");
+			//Destroy(Food);
+		}
 		}
 	}
 }
