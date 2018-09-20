@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using EZCameraShake;
+using UnityEngine.XR;
 
 public class sencer : MonoBehaviour {
-public GameObject HMD ;
+public GameObject head ;
 Vector3 pos;
 int flag = 0;
 
@@ -19,9 +20,9 @@ private CameraShakeInstance m_instance;
 
 	// Update is called once per frame
 	void Update () {
-		pos = HMD.transform.position;
-		pos.y += 0.7f;
-		transform.position = pos;
+		pos = InputTracking.GetLocalPosition(XRNode.CenterEye);
+		//pos.y -= 0.7f;
+		transform.position = new Vector3(pos.x,pos.y-4.7f,pos.z);
 if (Time.timeScale == 0){
 	if(flag == 0){
 	Debug.Log("2");
@@ -41,7 +42,7 @@ if (Time.timeScale == 0){
 		case "wolf" :
 		case "bear" :
 		case "human" :
-		case "food" :
+
 
 		// m_instance = m_shaker.StartShake(1,1,0.1f);
 		// m_instance.DeleteOnInactive = false;

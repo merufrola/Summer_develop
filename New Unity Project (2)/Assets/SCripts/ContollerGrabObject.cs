@@ -81,14 +81,14 @@ public class ContollerGrabObject : MonoBehaviour {
 
     void Update()
     {
-        // if (Controller.GetHairTriggerDown())
-        // {
-        //     if (collidingObject)
-        //     {
-        //
-        //         GrabObject();
-        //     }
-        // }
+        if (Controller.GetHairTriggerDown())
+        {
+            if (collidingObject)
+            {
+
+                GrabObject();
+            }
+        }
 
         if (Controller.GetHairTriggerUp())
         {
@@ -98,49 +98,51 @@ public class ContollerGrabObject : MonoBehaviour {
             }
         }
     }
-
-    void Grab(){
-        if (Controller.GetHairTriggerDown())
-        {
-            if (collidingObject)
-            {
-                switch(collidingObject.transform.tag){
-                    case "food":
-                        GrabObject();
-                        break;
-                case "hare" :
-                    if(statemanager.state>0){
-                        GrabObject();
-                    }
-                break;
-                case "fox" :
-                if(statemanager.state>1){
-                    GrabObject();
-                }
-                break;
-                case "wolf" :
-                if(statemanager.state>2){
-                    GrabObject();
-                }
-                break;
-                case "bear" :
-                if(statemanager.state>3){
-                    GrabObject();
-                }
-                break;
-                if(statemanager.state>4){
-                    GrabObject();
-                }
-                break;
-                case "human" :
-                if(statemanager.state>5){
-                    GrabObject();
-                }
-                break;
-            }
-
-
-            }
-        }
-    }
+    //
+    // void Grab(){
+    //
+    //     if (Controller.GetHairTriggerDown())
+    //     {
+    //         if (collidingObject)
+    //         {
+    //             GrabObject();
+    //             // switch(collidingObject.transform.tag){
+    //             //     case "food":
+    //             //         GrabObject();
+    //             //         break;
+    //             // case "hare" :
+    //             //     if(statemanager.state>0){
+    //             //         GrabObject();
+    //             //     }
+    //             // break;
+    //             // case "fox" :
+    //             // if(statemanager.state>1){
+    //             //     GrabObject();
+    //             // }
+    //             // break;
+    //             // case "wolf" :
+    //             // if(statemanager.state>2){
+    //             //     GrabObject();
+    //             // }
+    //             // break;
+    //             // case "bear" :
+    //             // if(statemanager.state>3){
+    //             //     GrabObject();
+    //             // }
+    //             // break;
+    //             // if(statemanager.state>4){
+    //             //     GrabObject();
+    //             // }
+    //             // break;
+    //             // case "human" :
+    //             // if(statemanager.state>5){
+    //             //     GrabObject();
+    //             // }
+    //             // break;
+    //     //    }
+    //
+    //
+    //         }
+    //     }
+    // }
 }
