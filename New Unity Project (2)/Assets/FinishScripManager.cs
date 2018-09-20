@@ -14,7 +14,7 @@ public Text text4;
 		if(statemanager.state>5){
 			text1.text = "Game Complete!";
 		}else{
-			text1.text = "Game Ovre!";
+			text1.text = "Game Over!";
 		}
 
 		text2.text = "point：" + statemanager.point;
