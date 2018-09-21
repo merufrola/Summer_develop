@@ -10,6 +10,8 @@ public class ContollerGrabObject : MonoBehaviour {
 
     private GameObject objectInHand;
 
+    public static bool GrabFlag = false;
+
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -85,7 +87,7 @@ public class ContollerGrabObject : MonoBehaviour {
         {
             if (collidingObject)
             {
-
+                GrabFlag = true;
                 GrabObject();
             }
         }
@@ -94,6 +96,7 @@ public class ContollerGrabObject : MonoBehaviour {
         {
             if (objectInHand)
             {
+                GrabFlag = false;
                 ReleaseObject();
             }
         }

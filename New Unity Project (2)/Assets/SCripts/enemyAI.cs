@@ -8,6 +8,7 @@ public class enemyAI : MonoBehaviour {
 public Transform target;
 int randGOAL;
 int flag = 0;
+Animator animator ;
 
 [SerializeField]
 public GameObject bear;
@@ -20,10 +21,11 @@ public GameObject fox;
 // InvokeRepeating("rand",5f,5f);
 //フードセンサの位置を取得(プレイヤーめがけて動かない場合は必要ない)
 target = GameObject.Find("foodsencer").transform;
+//animator = GetComponent<Animator>;
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		//プレイヤーに向かってくる場合は以下のスクリプトを解除
 // if(flag == 0){
 // 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position-transform.position),1f);
@@ -33,6 +35,8 @@ target = GameObject.Find("foodsencer").transform;
 // 	else if(flag == 1){
 
 //反転してしまう動物たちのためのスクリプト
+if(statemanager.Timeflag == 0){
+
 		switch(transform.tag){
 			case "fox" :
 			case "bear" :
@@ -47,6 +51,7 @@ target = GameObject.Find("foodsencer").transform;
 		break;
 
 	}
+
 
 //プレイヤーとの位置を測るためのスクリプト(プレイヤーに向かってこない場合は必要ない)
 Ray ray = new Ray(transform.position, transform.forward);
@@ -64,7 +69,7 @@ if(Physics.Raycast(ray, out hit, 10.0f)){
 
 
 
-
+}
 
 //Invoke("damage",10f);
 

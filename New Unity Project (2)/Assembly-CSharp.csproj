@@ -74,6 +74,7 @@
      <Compile Include="Assets\MagicMirror\Prefab\MirrorCameraScript.cs" />
      <Compile Include="Assets\MagicMirror\Prefab\MirrorReflectionScript.cs" />
      <Compile Include="Assets\MagicMirror\Prefab\MirrorScript.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\ScoreUI.cs" />
      <Compile Include="Assets\SCripts\ContollerGrabObject.cs" />
      <Compile Include="Assets\SCripts\destroyzone.cs" />

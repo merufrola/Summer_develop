@@ -24,11 +24,12 @@ InvokeRepeating("spawner",2f,2f);
 	}
 //敵生成関数
 void spawner(){
+	if(statemanager.Timeflag == 0){
 	randTYPE = Random.Range(0,5);
 	randSPN = Random.Range(0,3);
 
 	Instantiate (type[randTYPE], new Vector3(Spawner[randSPN],0.7f,18.5f),Quaternion.identity);
-
+}
 }
 
 }

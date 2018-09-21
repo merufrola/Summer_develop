@@ -11,6 +11,7 @@ public static bool foxgrab = false;
 public static bool wolfgrab = false;
 public static bool beargrab = false;
 public static bool humangrab = false;
+public static int Timeflag = 0;
 
 
 
