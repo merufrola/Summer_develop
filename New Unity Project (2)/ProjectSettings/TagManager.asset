@@ -6,6 +6,17 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - ME
+  - food
+  - zone
+  - enemy
+  - bear
+  - fox
+  - hare
+  - wolf
+  - human
+  - Body
+  - grab
   layers:
   - Default
   - TransparentFX
